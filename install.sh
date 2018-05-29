@@ -80,7 +80,7 @@ apt-get update
 aptitude -y -q install fail2ban
 service fail2ban restart
 apt-get -qq install ufw
-ufw default deny incoming
+#ufw default deny incoming
 ufw default allow outgoing
 ufw allow ssh
 ufw allow 15198/tcp
