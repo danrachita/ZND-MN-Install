@@ -162,7 +162,7 @@ EOL
 
 chmod +x /usr/local/bin/zenadd 
 chmod +x /usr/local/bin/zenad-cli
-sudo ln -s /usr/lib/x86_64-linux-gnu/libboost_system.so.1.58.0 /usr/lib/x86_64-linux-gnu/libboost_program_options.so.1.54.0
+#sudo ln -s /usr/lib/x86_64-linux-gnu/libboost_system.so.1.58.0 /usr/lib/x86_64-linux-gnu/libboost_program_options.so.1.54.0
 #start service
 echo "
 ********Starting Service*************
