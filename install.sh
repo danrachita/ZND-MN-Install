@@ -104,16 +104,15 @@ chmod +x /usr/local/bin/zenad-cli
 chmod +x ./zenad-cli
 echo "
 *********Configuring confs***********
-
-USER=root
-
-USERHOME=`eval echo "~$USER"`
-
-read -e -p "Server IP Address: " -i $EXTERNALIP -e IP
-read -e -p "Masternode Private Key: " KEY
 "
 sleep 2
 mkdir $USERHOME/.zenad
+
+
+USER=root
+USERHOME=`eval echo "~$USER"`
+read -e -p "Server IP Address: " -i $EXTERNALIP -e IP
+read -e -p "Masternode Private Key: " KEY
 
 # Create hightemperature.conf
 touch $USERHOME/.zenad/zenad.conf
