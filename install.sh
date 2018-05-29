@@ -155,14 +155,14 @@ After=network.target
 Type=forking
 User=${USER}
 WorkingDirectory=${USERHOME}
-ExecStart=/usr/local/bin/zenad -conf=${USERHOME}/.zenad/zenad.conf -datadir=${USERHOME}/.zenad
+ExecStart=/usr/local/bin/zenadd -conf=${USERHOME}/.zenad/zenad.conf -datadir=${USERHOME}/.zenad
 ExecStop=/usr/local/bin/zenad-cli -conf=${USERHOME}/.zenad/zenad.conf -datadir=${USERHOME}/.zenad stop
 Restart=on-abort
 [Install]
 WantedBy=multi-user.target
 EOL
 
-chmod +x /usr/local/bin/zenad 
+chmod +x /usr/local/bin/zenadd 
 chmod +x /usr/local/bin/zenad-cli
 sudo ln -s /usr/lib/x86_64-linux-gnu/libboost_system.so.1.58.0 /usr/lib/x86_64-linux-gnu/libboost_program_options.so.1.54.0
 #start service
@@ -190,7 +190,7 @@ until su -c "zenad-cli startmasternode local false 2>/dev/null | grep 'successfu
     echo "Service Started. Your masternode is syncing. 
     When Current = Synced then select your MN in the local wallet and start it."
     echo "Current Block: "
-    su -c "curl http://explorer.kreita.io/api/getblockcount" $USER
+    su -c "curl http://chain.zenad.group/api/getblockcount" $USER
     echo "
     Synced Blocks: "
     su -c "zenad-cli getblockcount" $USER
