@@ -34,7 +34,7 @@ clear
 
 
 echo "
- |   +------- MASTERNODE INSTALLER v1.2 -------+  |
+ |   +------- MASTERNODE INSTALLER v1.3 -------+  |
  |   ZND Installer by Kurbz                       |
  |   for Ununtu 16.04 only                        |
  +------------------------------------------------+
