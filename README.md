@@ -16,7 +16,7 @@ masternode genkey
 on your vps log in as root and run:
 
 ```
-bash <( curl https://raw.githubusercontent.com/ktjbrowne/ZND-MN-Install/master/krt-install.sh )
+bash <( curl https://raw.githubusercontent.com/ktjbrowne/ZND-MN-Install/master/install.sh )
 ```
 
 Some in script instructions will ask you for the:
