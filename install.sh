@@ -182,7 +182,7 @@ echo "Service Started... Press any key to continue. "
 
 echo "Your masternode is syncing. Please wait for this process to finish. "
 
-until su -c "zenad-cli startmasternode local false 2>/dev/null | grep 'successfully started' > /dev/null" $USER; do
+until su -c "zenad-cli masternode status 2>/dev/null | grep 'Masternode successfully started' > /dev/null" $USER; do
   for (( i=0; i<${#CHARS}; i++ )); do
     sleep 5
     #echo -en "${CHARS:$i:1}" "\r"
@@ -197,7 +197,7 @@ until su -c "zenad-cli startmasternode local false 2>/dev/null | grep 'successfu
   done
 done
 
-su -c "/usr/local/bin/zenad-cli startmasternode local false" $USER
+#su -c "/usr/local/bin/zenad-cli startmasternode local false" $USER
 
 sleep 1
 su -c "/usr/local/bin/zenad-cli masternode status" $USER
